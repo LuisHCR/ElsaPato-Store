@@ -1,1 +1,2 @@
-### ElsaPato-Store is a website that is built with the LAMP stack. #JustForFun.
+### ElsaPato-Store 
+This is a website that is built with the LAMP stack. #JustForFun.
