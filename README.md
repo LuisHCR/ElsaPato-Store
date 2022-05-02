@@ -1,2 +1,2 @@
 ## ElsaPato-Store 
-A full stack LAMP project.
+Ecommerce website, personal full stack LAMP project (Work in progress)
