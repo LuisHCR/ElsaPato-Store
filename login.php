@@ -122,9 +122,8 @@ if (isset($_SESSION["username"]) && isset($_SESSION["password"])) {
                             <input type="checkbox" value="remember-me"> Recordarme
                         </label>
                     </div>
-                    <button class="w-100 btn btn-lg btn-primary p-2 mb-2" type="submit">Iniciar</button>
-                    <a class="w-100 btn btn-lg btn-primary p-2 mb-2" href="logout.php" role="button">Cerrar sesión</a>
-
+                    <button class="w-100 btn btn-lg btn-primary p-2 mb-2" type="submit">Iniciar sesión</button>
+                    <a class="w-100 btn btn-lg btn-primary p-2 mb-2" href="registro.php" role="button">Registrarse</a>
                 </form>
             </div>
         </div>
