@@ -5,5 +5,6 @@ Technologies:
 - HTML 
 - CSS/Bootstrap
 - JavaScript
+- Apache
 - PHP/Composer
 - MySQL
