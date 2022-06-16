@@ -56,8 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         try {
-            //API ec61b36f321f2b1cfb864b4b50eba798
-            //CLAVE 087d8ac9bfa991d3f648b44d0a3e17a9
+
 
             $mail->isSMTP();
             $mail->SMTPOptions = array(
@@ -70,15 +69,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->Host = 'in-v3.mailjet.com'; // host
             $mail->SMTPAuth = true;
-            $mail->Username = 'ec61b36f321f2b1cfb864b4b50eba798'; //API_KEY username
-            $mail->Password = '087d8ac9bfa991d3f648b44d0a3e17a9'; //SECRET_KEY password
+            $mail->Username = ''; //API_KEY username
+            $mail->Password = ''; //SECRET_KEY password
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587; //smtp port
 
             //$mail->setFrom('SENDER_EMAIL_ADDRESS', 'SENDER_NAME');
-            $mail->setFrom('alt.r9-cf9twca@yopmail.com');
+            $mail->setFrom('');
             //$mail->addAddress('RECIPIENT_EMAIL_ADDRESS', 'RECIPIENT_NAME');
-            $mail->addAddress('yo_victor@yahoo.es');
+            $mail->addAddress('miCorreo@correo.com');
 
             $mail->isHTML(true);
             $mail->Subject = 'Formulario de contacto';
