@@ -1,50 +1,10 @@
 <?php
 // Estilos del menú de navegación para indicar la página actual
-($_SERVER["REQUEST_URI"] == "/elsapato/index.php") ? $linkActivo1 = "active fs-4" : $linkActivo1 = "";
-($_SERVER["REQUEST_URI"] == "/elsapato/mujer.php") ? $linkActivo2 = "active fs-4" : $linkActivo2 = "";
-($_SERVER["REQUEST_URI"] == "/elsapato/hombre.php") ? $linkActivo3 = "active fs-4" : $linkActivo3 = "";
-($_SERVER["REQUEST_URI"] == "/elsapato/verano.php") ? $linkActivo5 = "active fs-4" : $linkActivo5 = "";
-($_SERVER["REQUEST_URI"] == "/elsapato/contacto.php") ? $linkActivo7 = "active fs-4" : $linkActivo7 = "";
-?>
-
-
-<?php
-// Botón de inicio de sesión en el menú de navegación cuando existe sesión (admin) y cuando no (invitado)
-if (isset($_SESSION["username"]) && isset($_SESSION["password"])) {
-    // Nombre de usuario en el botón
-    $navButtonUsername = $_SESSION["username"];
-    // Botón vacío cuando hay sesión
-    $sessionOffButton = "";
-    // Botón cuando hay sesión
-    $sessionOnButton = '               
-    <div class="btn-group ps-2">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user pe-2"></i> ' . $navButtonUsername . '
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item btn btn-secondary" role="button" href="logout.php">Cerrar sesión</a></li>
-        </ul>
-    </div>';
-} else {
-    // Nombre de usuario en el botón
-    $navButtonUsername = "Invitado";
-    // Botón cuando no hay sesión
-    $sessionOffButton = '
-     <div class="btn-group ps-2">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-user pe-2"></i> ' . $navButtonUsername . '
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item btn btn-secondary" role="button" href="contacto.php">Ayuda</a> </li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item btn btn-secondary" role="button" href="login.php">Iniciar sesión</a> </li>
-        </ul>
-    </div>';
-    // Botón cuando hay sesión
-    $sessionOnButton = "";
-}
+(substr($_SERVER["REQUEST_URI"], -9) == "index.php") ? $linkActivo1 = "active fs-4" : $linkActivo1 = "";
+(substr($_SERVER["REQUEST_URI"], -9) == "mujer.php") ? $linkActivo2 = "active fs-4" : $linkActivo2 = "";
+(substr($_SERVER["REQUEST_URI"], -10) == "hombre.php") ? $linkActivo3 = "active fs-4" : $linkActivo3 = "";
+(substr($_SERVER["REQUEST_URI"], -10) == "verano.php") ? $linkActivo5 = "active fs-4" : $linkActivo5 = "";
+(substr($_SERVER["REQUEST_URI"], -12) == "contacto.php") ? $linkActivo8 = "active fs-4" : $linkActivo8 = "";
 ?>
 
 
@@ -54,6 +14,7 @@ if (isset($_SESSION["username"]) && isset($_SESSION["password"])) {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex align-content-center align-items-center flex-wrap">
                 <li class="nav-item">
@@ -71,14 +32,47 @@ if (isset($_SESSION["username"]) && isset($_SESSION["password"])) {
                         Ofertas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="verano.php">Primavera</a></li>
                         <li><a class="dropdown-item" href="verano.php">Verano</a></li>
+                        <li><a class="dropdown-item" href="verano.php">Otoño</a></li>
+                        <li><a class="dropdown-item" href="verano.php">Invierno</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= $linkActivo7; ?>" href="contacto.php">Contacto</a>
+                    <a class="nav-link <?= $linkActivo8; ?>" href="contacto.php">Contacto</a>
                 </li>
-                <?= $sessionOffButton,
-                $sessionOnButton; ?>
+
+
+                <!-- Botón de inicio de sesión en el menú de navegación cuando existe sesión (admin) y cuando no (invitado) -->
+                <?php if (isset($_SESSION["username"]) && isset($_SESSION["password"])) : ?>
+
+                    <div class="btn-group ps-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user pe-2"></i> <?= $_SESSION["username"] ?>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item btn btn-secondary" role="button" href="logout.php">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+
+                <?php else : ?>
+
+                    <div class="btn-group ps-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user pe-2"></i> Invitado
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item btn btn-secondary" role="button" href="login.php">Iniciar sesión</a> </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item btn btn-secondary" role="button" href="registro.php">Registrarse</a> </li>
+                        </ul>
+                    </div>
+
+                <?php endif ?>
+
+
             </ul>
         </div>
     </div>
