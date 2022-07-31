@@ -3,7 +3,7 @@
 
 <?php
 //  CUENTA ATRAS DE LA PROMOCIÓN 
-$fechaFinalOferta = date('2022-07-30');
+$fechaFinalOferta = date('2022-08-15');
 $horaFinalOferta = date('23:59:59');
 $fechayHoraFinalOferta = $fechaFinalOferta . ' ' . $horaFinalOferta;
 
