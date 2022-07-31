@@ -60,7 +60,7 @@ function limpiar($datos)
 
                 <script>
                 const redireccion = setTimeout(() => {
-                    window.location.replace("http://elsapato.test/dashboard.php");
+                    window.location.replace("https://php-ecommerce.up.railway.app/dashboard.php");
                 }, 3000);
                 </script>
             </div>
