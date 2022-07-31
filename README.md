@@ -1,9 +1,7 @@
-## ElsaPato-Store 
-Personal full stack project (Work in progress):
-
-Technologies:
+## php-ecommerce
+Proyecto web práctico, tienda de zapatos online, construido con:
 - HTML 
-- CSS/Bootstrap
+- Bootstrap
 - JavaScript
-- PHP/Composer
+- PHP
 - PostgreSQL
