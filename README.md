@@ -4,4 +4,4 @@ Proyecto web práctico, tienda de zapatos online, construido con:
 - Bootstrap
 - JavaScript
 - PHP
-- PostgreSQL
+- MySQL
