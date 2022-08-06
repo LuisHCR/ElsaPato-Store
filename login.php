@@ -59,9 +59,8 @@ function limpiar($datos)
                 <h3 class="text-center m-5"> Redirigiendo al panel de control...</h3>
 
                 <script>
-                const redirect = setTimeout(() => {
-                    <?php header("Location: dashboard.php")  ?>
-                    // window.location.replace("http://elsapato.test/dashboard.php");
+                const redireccion = setTimeout(() => {
+                    window.location.replace("elsapato.test/dashboard.php");
                 }, 3000);
                 </script>
             </div>
