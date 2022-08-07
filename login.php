@@ -65,11 +65,11 @@ function limpiar($datos)
                     </div>
                 </div>
 
-                <!-- <script>
+                <script>
                 const redireccion = setTimeout(() => {
                     window.location.replace("/dashboard.php");
                 }, 3000);
-                </script> -->
+                </script>
             </div>
         </div>
     </main> 
@@ -114,7 +114,7 @@ function limpiar($datos)
                         </label>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary p-2 mb-2" type="submit">Iniciar sesión</button>
-                    <a class="w-100 btn btn-lg btn-primary p-2 mb-2" href="registro" role="button">Registrarse</a>
+                    <a class="w-100 btn btn-lg btn-primary p-2 mb-2" href="registro.php" role="button">Registrarse</a>
                 </form>
             </div>
         </div>

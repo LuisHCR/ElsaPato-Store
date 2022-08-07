@@ -55,8 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         $domicilio = limpiar($_POST["domicilio"]);
     }
-
-    var_dump($_POST);
 }
 
 // Función para eliminar espacios y caracteres especiales de una cadena de texto

@@ -2,14 +2,14 @@
 
 <?php
 // ESTILOS TÍTULO HEADER DINÁMICO
-(substr($_SERVER["REQUEST_URI"], -4) == "home") ? $titulo1 = "🏪 Elsa Pato Store" : $titulo1 = "";
-(substr($_SERVER["REQUEST_URI"], -5) == "mujer") ? $titulo2 = "👠 Zapatos para Mujer" : $titulo2 = "";
-(substr($_SERVER["REQUEST_URI"], -6) == "hombre") ? $titulo3 = "👞 Zapatos para Hombre" : $titulo3 = "";
-(substr($_SERVER["REQUEST_URI"], -6) == "verano") ? $titulo4 = "🎁 Ofertas de Verano" : $titulo4 = "";
-(substr($_SERVER["REQUEST_URI"], -8) == "contacto") ? $titulo5 = "📧 Formulario de Contacto" : $titulo5 = "";
-(substr($_SERVER["REQUEST_URI"], -5) == "login") ? $titulo6 = "🐱‍💻 Inicio de Sesión" : $titulo6 = "";
-(substr($_SERVER["REQUEST_URI"], -8) == "registro") ? $titulo7 = "🐱‍💻 Nuevo Registro" : $titulo7 = "";
-(substr($_SERVER["REQUEST_URI"], -9) == "dashboard") ? $titulo8 = "🛒 Panel de control" : $titulo8 = "";
+(substr($_SERVER["REQUEST_URI"], -9) == "index.php") ? $titulo1 = "🏪 Elsa Pato Store" : $titulo1 = "";
+(substr($_SERVER["REQUEST_URI"], -9) == "mujer.php") ? $titulo2 = "👠 Zapatos para Mujer" : $titulo2 = "";
+(substr($_SERVER["REQUEST_URI"], -10) == "hombre.php") ? $titulo3 = "👞 Zapatos para Hombre" : $titulo3 = "";
+(substr($_SERVER["REQUEST_URI"], -10) == "verano.php") ? $titulo4 = "🎁 Ofertas de Verano" : $titulo4 = "";
+(substr($_SERVER["REQUEST_URI"], -12) == "contacto.php") ? $titulo5 = "📧 Formulario de Contacto" : $titulo5 = "";
+(substr($_SERVER["REQUEST_URI"], -9) == "login.php") ? $titulo6 = "🐱‍💻 Inicio de Sesión" : $titulo6 = "";
+(substr($_SERVER["REQUEST_URI"], -12) == "registro.php") ? $titulo7 = "🐱‍💻 Nuevo Registro" : $titulo7 = "";
+(substr($_SERVER["REQUEST_URI"], -13) == "dashboard.php") ? $titulo8 = "🛒 Panel de control" : $titulo8 = "";
 ?>
 
 <!DOCTYPE html>
