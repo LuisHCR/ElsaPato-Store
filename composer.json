@@ -1,4 +1,21 @@
 {
+
+    "name": "luishcr/php-ecommerce",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luishcr"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "app/Logic/CreateUser.php"
+        ],
+        "psr-4": {
+            "App\\" : "app/"
+        }
+    },
     "require": {
         "phpmailer/phpmailer": "6.6"
     }

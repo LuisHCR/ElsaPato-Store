@@ -88,7 +88,7 @@
 
                 <!-- Copyright -->
                 <div class="text-center text-muted p-3"">
-                    &copy; 2022 Copyright - <a href="https://github.com/luishcr" class="link-secondary" target="_blank"> @luishcr </a>
+                    Developed by - <a href="https://github.com/luishcr" class="link-secondary" target="_blank"> github.com/luishcr </a>
                 </div>
                 <!-- Copyright -->
             </div>

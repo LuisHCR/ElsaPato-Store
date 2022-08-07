@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $error_login_feedback = '<div class="invalid-feedback">Usuario o contraseña incorrecta </div>';
         }
     }
+    
     if (empty($_POST["password"])) {
         $error_invalid = "is-invalid";
         $error_pass_feedback = '<div class="invalid-feedback">Debes escribir tu contraseña </div>';
@@ -47,22 +48,28 @@ function limpiar($datos)
 
 
 <?php if(isset($_SESSION["username"]) && isset($_SESSION["password"])): ?>
-    <main>
-        <div class="container-fluid vh-100">     
+    <main class=" mt-5 mb-5 d-flex align-items-center">
+        <div class="container-fluid mt-5 mb-5">     
             <div class="container-sm">
                 <div class="alert alert-success role="alert">
-                <i class="fa-solid fa-circle-check pe-2"></i> Sesión iniciada correctamente
+                <i class="fa-solid fa-circle-check pe-2"></i> Has iniciado sesión.
             </div>
 
             <div class="container-sm ">
-                <h2 class="text-center m-5"> Bienvenido <span class="fw-bold"> <?= $username ?></span> !!</h2> 
+                <h2 class="text-center m-5"> ¡ Bienvenido <span class="fw-bold"> <?= $username ?></span> !</h2> 
                 <h3 class="text-center m-5"> Redirigiendo al panel de control...</h3>
 
-                <script>
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Cargando...</span>
+                    </div>
+                </div>
+
+                <!-- <script>
                 const redireccion = setTimeout(() => {
-                    window.location.replace("elsapato.test/dashboard.php");
+                    window.location.replace("/dashboard.php");
                 }, 3000);
-                </script>
+                </script> -->
             </div>
         </div>
     </main> 
@@ -107,7 +114,7 @@ function limpiar($datos)
                         </label>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary p-2 mb-2" type="submit">Iniciar sesión</button>
-                    <a class="w-100 btn btn-lg btn-primary p-2 mb-2" href="registro.php" role="button">Registrarse</a>
+                    <a class="w-100 btn btn-lg btn-primary p-2 mb-2" href="registro" role="button">Registrarse</a>
                 </form>
             </div>
         </div>
